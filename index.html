@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MillerCompany | Professional Fencing & Tree Work</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo-white.png">
+</head>
+<body class="dark-theme">
+
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-white.png" alt="Miller Company Logo">
+                </a>
+            </div>
+            <button class="hamburger" id="menuBtn">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><div class="nav-dropdown">
+                    <a href="services.html" class="dropdown-trigger" onclick="toggleMobileDropdown(event)">Services <span class="chevron">&#9662;</span></a>
+                    <div class="dropdown-menu">
+                        <a href="services.html">All Services</a>
+                        <a href="fencing.html">Fencing Services</a>
+                        <a href="services.html#tree-care">Tree Services</a>
+                    </div>
+                </div></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="https://vid.cdn-website.com/md/pexels/videos/pexels-photo-4203127-v.mp4" type="video/mp4">
+        </video>
+        
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>Your Property Professionals</h1>
+            <p>Ground-up site preparation built to support long-term performance and lasting durability.</p>
+            <a href="contact.html" class="btn btn-primary">Request a Free Estimate</a>
+            <a href="services.html" class="btn btn-secondary">Our Services</a>
+        </div>
+    </section>
+
+    <section class="services-detailed-section">
+        <div class="container grid-2">
+            <div class="service-text">
+                <h2>Dependable Property Solutions</h2>
+                <div class="accent-divider"></div>
+                <p>At MillerCompany, we specialize in enhancing your property’s security, privacy, and natural beauty. From secure residential boundary fencing to complex, safe tree removal operations, our team brings precision and heavy-duty expertise to every job site.</p>
+                <p>We pride ourselves on clean work environments, strict safety standards, and structural durability built to withstand the elements.</p>
+            </div>
+            <div class="service-media">
+                <img src="images/fence3.PNG" alt="Worksite">
+            </div>
+        </div>
+    </section>
+
+    <section class="services-preview-section">
+        <div class="container">
+            
+            <div class="section-header-centered">
+                <span class="section-label">What We Do</span>
+                <h2>Our Core Specialties</h2>
+                <div class="accent-divider-centered"></div>
+            </div>
+
+            <div class="services-preview-grid">
+                
+                <div class="services-preview-grid">
+                
+                <!-- Specialty 1: Fencing -->
+                <div class="service-preview-card">
+                    <div class="card-image-box">
+                        <img src="images/fence5.PNG" alt="Professional fence installation workspace">
+                    </div>
+                    <h3>Fence Installation &amp; Repair</h3>
+                    <p>Custom wood privacy dividers, durable chain-link boundaries, and heavy-duty commercial security gate setups engineered to endure the elements.</p>
+                </div>
+
+                <!-- Specialty 2: Tree Care -->
+                <div class="service-preview-card">
+                    <div class="card-image-box">
+                        <img src="images/tree2.PNG" alt="High-risk tree extraction rigging operations">
+                    </div>
+                    <h3>Tree Care &amp; Hazardous Removal</h3>
+                    <p>Precision clearing, structural canopy pruning, stump grinding, and safe, high-risk tree rigging extractions to protect local structures.</p>
+                </div>
+
+                <!-- Specialty 3: Demolition -->
+                <div class="service-preview-card">
+                    <div class="card-image-box">
+                        <img src="images/demo3.PNG" alt="Heavy equipment light structural demolition jobsite">
+                    </div>
+                    <h3>Demolition &amp; Site Clearing</h3>
+                    <p>Light structural building tear-outs, overgrown lot underbrush clearing, concrete slab extraction, and comprehensive debris haul-off management.</p>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="center-action-wrapper">
+                <a href="services.html" class="btn btn-secondary">Explore Service Details</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section style="background-color: var(--bg-black);">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="grid-3">
+                
+                <div class="card">
+                    <img src="images/fence.PNG" alt="Commercial Fence" class="card-bg">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <h3>Commercial Grade</h3>
+                        <p>We build with premium materials and heavy equipment designed to last for decades.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/specialize.PNG" alt="Specialized Equipment" class="card-bg">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <h3>Specialized Care</h3>
+                        <p>From precision boundary layouts to intricate rigging for high-risk tree extractions, we handle complex property challenges.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/local.PNG" alt="Local Bayou" class="card-bg">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <h3>Local & Reliable</h3>
+                        <p>Prompt communication, transparent scheduling, and straightforward project bidding.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-site-footer">
+        <div class="container footer-grid">
+            
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="images/logo-white.png" alt="Miller Company Logo">
+                </a>
+                <p>Premium perimeter fence installation, safe tree clearing operations, and light demolition services across Monroe and Northeast Louisiana.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Project Gallery</a></li>
+                    <li><a href="contact.html">Get A Quote</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>
+                    <strong>Phone:</strong> <a href="tel:3185550190">(318) 555-0190</a><br>
+                    <strong>Email:</strong> <a href="mailto:info@millercompany.net">info@millercompany.net</a><br>
+                    <strong>Location:</strong> Monroe, Louisiana
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 MillerCompany &mdash; Monroe, LA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    function toggleMobileDropdown(event) {
+        if (window.innerWidth <= 768) {
+            var dropdownParent = event.target.closest('.nav-dropdown');
+            
+            // Check if the menu is already active
+            var isOpen = dropdownParent.classList.contains('mobile-open');
+            
+            // Prevent the browser from changing pages instantly
+            event.preventDefault(); 
+            
+            if (!isOpen) {
+                dropdownParent.classList.add('mobile-open');
+            } else {
+                dropdownParent.classList.remove('mobile-open');
+            }
+        }
+    }
+    </script>
+</body>
+</html>

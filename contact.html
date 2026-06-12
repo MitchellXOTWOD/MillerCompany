@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact &amp; Quotes | MillerCompany</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo-white.png">
+</head>
+<body class="dark-theme">
+
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo-white.png" alt="Miller Company Logo">
+                </a>
+            </div>
+            <button class="hamburger" id="menuBtn">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><div class="nav-dropdown">
+                    <a href="services.html" class="dropdown-trigger" onclick="toggleMobileDropdown(event)">Services <span class="chevron">&#9662;</span></a>
+                    <div class="dropdown-menu">
+                        <a href="services.html">All Services</a>
+                        <a href="fencing.html">Fencing Services</a>
+                        <a href="services.html#tree-care">Tree Services</a>
+                    </div>
+                </div></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PAGE HERO HERO COMPONENT -->
+    <div class="page-hero">
+        <span class="section-label">Connect With Our Team</span>
+        <h1>Request An Estimate</h1>
+        <p>Drop your project specifications below, and our site estimators will build out a breakdown tailormade for your property.</p>
+    </div>
+
+    <!-- MAIN FORM & INTAKE WRAPPER -->
+    <section>
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <div class="contact-info">
+                    <h3>Let's Discuss Your Project</h3>
+                    <p>Fill out our form to give us some details about your property needs. For urgent tree removal requests following storm damage, call our primary phone line directly for expedited response times.</p>
+                    
+                    <div class="service-cta-wrapper">
+                        <p><strong>Phone:</strong> (318) 555-0190</p>
+                        <p><strong>Email:</strong> info@millercompany.net</p>
+                        <p><strong>Service Area:</strong> West Monroe, LA &amp; Surrounding Regions</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="quoteForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(318) 555-0100">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Requested Service</label>
+                            <select id="service" name="service" required>
+                                <option value="">-- Select a Service --</option>
+                                <option value="fence-install">New Fence Installation</option>
+                                <option value="fence-repair">Fence Repair Work</option>
+                                <option value="tree-removal">Tree Removal</option>
+                                <option value="tree-trimming">Tree Pruning / Trimming</option>
+                                <option value="demolition">Demolition &amp; Site Clearing</option>
+                                <option value="other">Other Land / Property Work</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Description</label>
+                            <textarea id="message" name="message" required placeholder="Please describe the approximate size, material preferences, or tree details..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-phone-action" style="border: none; width: 100%;">Submit Request</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-site-footer">
+        <div class="container footer-grid">
+            
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="images/logo-white.png" alt="Miller Company Logo">
+                </a>
+                <p>Premium perimeter fence installation, safe tree clearing operations, and light demolition services across Monroe and Northeast Louisiana.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><div class="nav-dropdown">
+                        <a href="services.html" class="dropdown-trigger">Services <span class="chevron">&#9662;</span></a>
+                        <div class="dropdown-menu">
+                            <a href="services.html">All Services</a>
+                            <a href="services.html#fencing">Fencing Services</a>
+                            <a href="services.html#tree-care">Tree Services</a>
+                        </div>
+                    </div></li>
+                    <li><a href="gallery.html">Project Gallery</a></li>
+                    <li><a href="contact.html">Get A Quote</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>
+                    <strong>Phone:</strong> <a href="tel:3185550190">(318) 555-0190</a><br>
+                    <strong>Email:</strong> <a href="mailto:info@millercompany.net">info@millercompany.net</a><br>
+                    <strong>Location:</strong> Monroe, Louisiana
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 MillerCompany &mdash; Monroe, LA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    function toggleMobileDropdown(event) {
+        if (window.innerWidth <= 768) {
+            var dropdownParent = event.target.closest('.nav-dropdown');
+            
+            // Check if the menu is already active
+            var isOpen = dropdownParent.classList.contains('mobile-open');
+            
+            // Prevent the browser from changing pages instantly
+            event.preventDefault(); 
+            
+            if (!isOpen) {
+                dropdownParent.classList.add('mobile-open');
+            } else {
+                dropdownParent.classList.remove('mobile-open');
+            }
+        }
+    }
+    </script>
+</body>
+</html>
