@@ -509,6 +509,7 @@ section {
 
 .service-media img {
     width: 100%;
+    min-width: 350px;
     height: 320px;
     object-fit: cover;
     border-top: 3px solid var(--secondary-color);
