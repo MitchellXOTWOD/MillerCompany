@@ -35,8 +35,20 @@ const nextBtn = document.getElementById('nextBtn');
 let currentIndex = 0;
 let galleryImages = []; // Global array holding rendered image elements for cycling
 
+// Safely only execute if BOTH the grid and lightbox elements exist on the current page
 if (galleryGrid && lightbox) {
-    fetch('gallery.json')
+    
+    // Improved multi-page image routing mechanic
+    const currentFilename = window.location.pathname.split('/').pop();
+    let targetJsonFile = 'gallery.json'; // Global default fallback
+
+    if (currentFilename === 'fencing.html') {
+        targetJsonFile = 'fencing-gallery.json';
+    } else if (currentFilename === 'treeservice.html') {
+        targetJsonFile = 'tree-gallery.json';
+    }
+
+    fetch(targetJsonFile)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network issues fetching gallery records');
@@ -77,24 +89,30 @@ if (galleryGrid && lightbox) {
         }
     }
 
-    // Slider Navigation Elements
-    nextBtn.addEventListener('click', (e) => {
-        e.stopPropagation(); 
-        if (galleryImages.length > 0) {
-            currentIndex = (currentIndex + 1) % galleryImages.length;
-            updateLightbox();
-        }
-    });
+    // Slider Navigation Elements (Safely contained inside our element checker conditional block)
+    if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            if (galleryImages.length > 0) {
+                currentIndex = (currentIndex + 1) % galleryImages.length;
+                updateLightbox();
+            }
+        });
+    }
 
-    prevBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (galleryImages.length > 0) {
-            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-            updateLightbox();
-        }
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (galleryImages.length > 0) {
+                currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+                updateLightbox();
+            }
+        });
+    }
 
     // Close Modals
-    lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+    }
     lightbox.addEventListener('click', () => lightbox.classList.remove('active'));
 }

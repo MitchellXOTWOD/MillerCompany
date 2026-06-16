@@ -3,7 +3,7 @@
    ========================================================================== */
 :root {
     --primary-color: #1a252c;   /* Dark Slate */
-    --secondary-color: #f2a900; /* Amber/Orange Accent */
+    --secondary-color: #C0C0C0; /* Amber/Orange Accent */
     --bg-dark-heavy: #0b1114;   /* Midnight Matte Background */
     --bg-black: #000000;        /* Deep Black Section Fill */
     --text-color: #ffffff;
@@ -354,7 +354,7 @@ section {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1350px;
     margin: 0 auto;
 }
 
@@ -1063,7 +1063,7 @@ footer {
 /* Subpage Banner Typography Framework */
 .subpage-hero {
     background-color: #11171c; /* Structural tone slightly lighter than absolute dark background */
-    background-image: linear-gradient(rgba(11, 15, 18, 0.8), rgba(11, 15, 18, 0.8)), url('assets/images/fencing-hero-bg.jpg');
+    background-image: linear-gradient(rgba(11, 15, 18, 0.8), rgba(11, 15, 18, 0.8));
     background-size: cover;
     background-position: center;
     padding: 100px 20px;
