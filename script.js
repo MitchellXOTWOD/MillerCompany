@@ -46,6 +46,8 @@ if (galleryGrid && lightbox) {
         targetJsonFile = 'fencing-gallery.json';
     } else if (currentFilename === 'treeservice.html') {
         targetJsonFile = 'tree-gallery.json';
+    } else if (currentFilename === 'dirtwork.html') {
+        targetJsonFile = 'dirt-gallery.json';
     }
 
     fetch(targetJsonFile)
@@ -64,6 +66,8 @@ if (galleryGrid && lightbox) {
                 const imgElement = document.createElement('img');
                 imgElement.src = imagePath;
                 imgElement.alt = `MillerCompany Project Photo ${index + 1}`;
+
+                imgElement.loading = 'lazy';
                 
                 itemWrapper.appendChild(imgElement);
                 galleryGrid.appendChild(itemWrapper);
