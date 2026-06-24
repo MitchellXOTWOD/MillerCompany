@@ -38,17 +38,20 @@ let galleryImages = []; // Global array holding rendered image elements for cycl
 // Safely only execute if BOTH the grid and lightbox elements exist on the current page
 if (galleryGrid && lightbox) {
     
-    // Improved multi-page image routing mechanic
-    const currentFilename = window.location.pathname.split('/').pop();
+    // Robust page routing that works with local files, clean URLs, and trailing slashes
+    const currentPath = window.location.pathname.toLowerCase();
     let targetJsonFile = 'gallery.json'; // Global default fallback
 
-    if (currentFilename === 'fencing.html') {
+    if (currentPath.includes('fencing')) {
         targetJsonFile = 'fencing-gallery.json';
-    } else if (currentFilename === 'treeservice.html') {
+    } else if (currentPath.includes('treeservice')) {
         targetJsonFile = 'tree-gallery.json';
-    } else if (currentFilename === 'dirtwork.html') {
+    } else if (currentPath.includes('dirtwork')) {
         targetJsonFile = 'dirt-gallery.json';
     }
+
+    console.log("Current Path detected:", currentPath);
+    console.log("Targeting JSON file:", targetJsonFile);
 
     fetch(targetJsonFile)
         .then(response => {
